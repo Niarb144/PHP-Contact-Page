@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel = "icon" type = "image/png" href = "./img/Imaaralogo.png">
+
+    <style>
+        
+
+        .contact-section {
+            background-image: url('./img/8249267.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+            display: flex;
+            flex-wrap: wrap;
+            
+          }
+          
+          .contact-info {
+            background: #ffffff;
+            border-radius: 8px 0 0 8px;
+            flex-basis: 30%;
+            height: 480px;
+            margin: auto;
+            margin-bottom: 30px;
+            padding: 12px 12px;
+          }
+          
+          .contact-info h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+          
+          .contact-info p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+          }
+          
+          
+          .contact-form {
+            flex-basis: 40%;
+            height: 520px;
+            margin: auto;
+            background: #e7d7d7;
+            padding: 12px 12px;
+            border-radius: 0 8px 8px 0;
+          }
+          
+          .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+          
+          .contact-form form {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          
+          .contact-form label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            
+          }
+          
+          .contact-form input,
+          .contact-form textarea {
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+          }
+          
+          .contact-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+          }
+          
+          .line-input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+          }
+          
+          .line-input label {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+          
+          .line-input input,
+          .line-input textarea {
+            border: none;
+            border-bottom: 2px solid #ccc;
+            font-size: 16px;
+            padding: 10px;
+            background-color: transparent;
+          }
+          
+          .line-input input:focus,
+          .line-input textarea:focus {
+            outline: none;
+            border-bottom-color: #0f0f0f;
+          }
+          
+          .btn-container {
+            display: flex;
+            margin-top: 20px;
+          }
+          
+          button[type="submit"] {
+            background-color: #07254d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            padding: 10px 30px;
+            cursor: pointer;
+          }
+          
+          button[type="submit"]:hover {
+            background-color: #124281;
+            transition: ease-in .6s ease-out;
+          }
+
+          .navbar-brand{
+            margin-left: 60px;
+        }
+        
+        .navbar .container-fluid img{
+            width: 100px !important;
+            height: 100px !important;
+        }
+        
+        .navbar .container-fluid img:hover{
+            cursor: pointer;
+        }
+        
+        .collapse{
+            margin: auto !important;
+        }
+        
+        .collapse .navbar-nav{
+            margin-left: auto;
+            margin-right: 60px !important;;
+        }
+
+        .change {
+            display: none;
+        }
+        
+        .details:hover + .change {
+            display: block;
+            color: #202020;
+            font-size: 18px;
+            transition: ease 0.5s;
+         }
+
+         .newsletter {
+          width: 100%;
+          margin: 0 auto;
+          padding-top: 20px;
+          background: #124281;
+        }
+
+        .newsletter h3{
+          text-align: center;
+          color: #fff;
+        }
+
+        #myform{
+          width: 400px;
+          margin: auto;
+          padding: 10px;
+          color: #fff;
+        }
+    
+        .form-group {
+          margin-bottom: 15px;
+        }
+    
+        .form-group label {
+          display: block;
+          margin-bottom: 5px;
+        }
+    
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+          width: 100%;
+          padding: 5px;
+          font-size: 16px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+        }
+    
+        .form-group input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          font-size: 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+          background-color: #3bdd40;
+          transition: ease .6s;
+        }
+          
+          @media screen and (max-width: 768px) {
+            .contact-section {
+              padding: 30px;
+              display: flex;
+              height: auto;
+            }
+            .contact-info,
+            .contact-form {
+              flex-basis: 100%;
+            }
+
+            .newsletter{
+              width: auto;
+            }
+
+            .newsletter h3{
+              text-align: center;
+            }
+
+            #myform{
+              width: 300px;
+            }
+          }
+          
+    </style>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- Font Awesome -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	rel="stylesheet"
+	/>
+	<!-- MDB -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+	rel="stylesheet"
+	/>
+</head>
+<body>
+    <header>
+        <!--Navbar-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="https://theimaara.co.ke/"><img src= "./img/Imaaralogo.png"/></a>
+		  <button
+			class="navbar-toggler"
+			type="button"
+			data-mdb-toggle="collapse"
+			data-mdb-target="#navbarTogglerDemo02"
+			aria-controls="navbarTogglerDemo02"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		  >
+			<i class="fas fa-bars"></i>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="https://theimaara.co.ke/">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Shops</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#about">About</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	  <!--Navbar End-->
+    </header>
+    <section class="contact-section">
+        <div class="contact-info">
+          <h2>Find Us Here</h2>
+          <i class='bx bxs-location-plus bx-fade-down-hover'>Location</i>
+          <p>Imaara Daima, Off Mombasa Road.</p>
+          <div style="width: 100%"><iframe width="100%" height="310" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Imaara%20Mall,%20Nairobi,%20Kenya+(The%20Imaara%20Mall)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html"></a></iframe></div>
+
+        </div>
+        <div class="contact-form">
+          <h2>Talk to Us</h2>
+          <form action = "sendemail.php" method="POST">
+            <!--<label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>-->
+            <div class="line-input">
+                <input type="text" id="name" name="name" placeholder="Your name...">
+              </div>
+              <div class="line-input">
+                
+                <input type="email" id="email" name="email" placeholder="Your email...">
+              </div>
+              <div class="line-input">
+                
+                <input type="text" id="subject" name="subject" placeholder="Subject...">
+              </div>
+              <div class="line-input">
+                
+                <textarea id="message" name="message" placeholder="Your message..."></textarea>
+              </div>
+
+              <div class="btn-container">
+                <button type="submit" value="send">Send Message</button>
+
+            
+          </form>
+        </div>
+      </section>
+
+      <div class="newsletter">
+        <h3>Subscribe to Imaara's Mailing List</h3>
+        <form id="myform" method="POST" action="https://script.google.com/macros/s/AKfycbwDbxgn2eaqldDs2Hqs6ef0fta9Ph_8jZNY4TjlbsEcj1A7jmakPbfT6DTnsfKRur3h/exec">
+          <div class="form-group">
+            
+            <input type="text" placeholder="Name" id="name" name="Name" required>
+          </div>
+          <div class="form-group">
+            
+            <input type="email" placeholder="Email" id="email" name="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              The Imaara Mall
+            </h6>
+            <p>
+              The Mall That Has It All.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Shops</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Events</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Imaaa Hype</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Nairobi, Imaara Daima, KEN</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              imaara@tuffsteel.co.ke
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 254 714800800</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://theimaara.co.ke">The Imaara Mall</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+      
+      <script>
+        function initMap() {
+            var location = {lat: 37.7749, lng: -122.4194}; // replace with your own latitude and longitude coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: location
+            });
+            var marker = new google.maps.Marker({
+              position: location,
+              map: map
+            });
+          }
+          
+      </script>
+
+      <!-- MDB -->
+	<script
+	type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+	></script>
+
+  <script>
+    // #sendMailForm takes the data from the form with given ID
+$( '#emailForm' ).submit(function ( e ) {
+  var data = {
+      'name': $('name').val(),
+      'email': $('email').val(),
+      'contact': $('subject').val(),
+      'message' : $('message').val()
+  };
+  // POST data to the php file
+  $.ajax({ 
+      url: 'email.php', 
+      data: data,
+      type: 'POST',
+      success: function (data) {
+    // For Notification
+          document.getElementById("emailForm").reset();
+          var $alertDiv = $(".mailResponse");
+          $alertDiv.show();
+          $alertDiv.find('.alert').removeClass('alert-danger alert-success');
+          $alertDiv.find('.mailResponseText').text("");
+          if(data.error){
+              $alertDiv.find('.alert').addClass('alert-danger');
+              $alertDiv.find('.mailResponseText').text(data.message);
+          }else{
+              $alertDiv.find('.alert').addClass('alert-success');
+              $alertDiv.find('.mailResponseText').text(data.message);
+          }
+      }
+  });
+  e.preventDefault();
+});
+  </script>
+
+   <!--JS-->
+   <script type="text/javascript"> 
+    window.addEventListener("load", function(){
+        const form = document.getElementById("myform");
+        form.addEventListener("submit",function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: "POST",
+                body: data,
+            })
+            .then(() => {
+                alert("You have successfully subscribed to Imaara Newsletter");
+            })
+        })
+    })
+</script>
+</body>
+</html>

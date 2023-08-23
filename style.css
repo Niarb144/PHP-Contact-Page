@@ -1,0 +1,139 @@
+body{
+    background-color: linear-gradient(to bottom,#999, #777);
+}
+
+.navbar-brand{
+    margin-left: 60px;
+}
+
+.navbar .container-fluid img{
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.navbar .container-fluid img:hover{
+    cursor: pointer;
+}
+
+.collapse{
+    margin: auto !important;
+}
+
+.collapse .navbar-nav{
+    margin-left: auto;
+    margin-right: 60px !important;;
+}
+
+section{
+    align-items: center;
+}
+
+.contact{
+    margin: auto;
+    margin-top: 10rem;
+    margin-left: 20rem;
+    height: 500px;
+    width: 1200px !important;
+    border-radius: 5px !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)!important;
+    display: inline-flex;
+}
+
+.contact-details{
+    margin-left: auto;
+    padding: 10px 10px;
+    width: 40% !important;
+    display: block;
+}
+
+video{
+    width: auto;
+    height: auto !important;
+    border-radius: 5px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.vid2 video{
+    width: auto;
+    height: auto !important;
+    margin-left: auto;
+    border-radius: 5px!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+h2{
+    font-size: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.change {
+    display: none;
+}
+
+.details:hover + .change {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    transition: ease 0.5s;
+ }
+ 
+
+.contact-form {
+    padding: 10px;
+    background: #574848;
+    width: 60%;
+}
+
+.contact-form .form-input input[type="text"]{
+    background: transparent;
+    border-style: none;
+    border-bottom: 1px solid #000000;
+    width: 300px !important;
+    padding: 10px;
+}
+
+.contact-form .form-input input[type="email"]{
+    background: transparent;
+    border-style: none;
+    border-bottom: 1px solid #000000;
+    width: 300px !important;
+    padding: 10px;
+}
+
+.contact-form .form-input input[type="tel"]{
+    background: transparent;
+    border-style: none;
+    border-bottom: 1px solid #000000;
+    width: 300px !important;
+    padding: 10px;
+}
+
+.contact-form .text{
+    padding: 10px;
+}
+
+@media screen and (max-width:1000px){
+    header{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
