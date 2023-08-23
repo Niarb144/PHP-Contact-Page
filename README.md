@@ -19,5 +19,14 @@ For the Gmail SMTP to work, some set up is required. The settings are changed in
        
 The SMTP settings will use the email as the username and the 16 digits as the password. Encryption type is SSL hence why we use the port 465.
 
+$mail->isHTML(true);
+$mail->setFrom($email, $name); //defines who sends the message with the email they key in
+$mail->addAddress("example@gmail.com"); //the email that the message goes to
+$mail->addCC("example2@gmail.com"); //add email to cc. this can be optional. 
+$mail->addBCC("example3@gmail.com"); //adds a blind carbon copy. Optional
+$mail->addReplyTo("email"); //this specifies which email will be replied to. The email entered in the form
+$mail->Subject = ("$subject");
+$mail->Body = $body;
+
 The code snippet above shows how to set up the receiving emails. On the addAddress line, the email to which the form info will be sent to is set. Other emails can be added the same or as a cc. The addReplyTo will take the email that has been keyed in and provide an option to reply to that email.
 
