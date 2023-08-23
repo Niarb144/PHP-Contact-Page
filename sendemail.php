@@ -16,16 +16,16 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     $mail->isSMTP();
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
-    $mail->Username = "teddybrian54@gmail.com";
-    $mail->Password = "fexlwaaxjnvkebxd";
+    $mail->Username = "youremail@email.com"; //enter your email here. This email will be used to send the emails within your site
+    $mail->Password = "xxxx xxxx xxxx xxxx"; //google 16 digit authentication code
     $mail->Port = 465;
     $mail->SMTPSecure = "ssl";
 
     //email settings
     $mail->isHTML(true);
     $mail->setFrom($email, $name);
-    $mail->addAddress("niarbyddet@gmail.com");
-    $mail->addCC("calvinflo2222@gmail.com");
+    $mail->addAddress("receivingmail@mail.com"); //the mail that receives the incoming messages
+    $mail->addCC("anyccmail@mail.com"); //add a cc email if needed
     $mail->Subject = ("$subject");
     $mail->Body = $body;
 
